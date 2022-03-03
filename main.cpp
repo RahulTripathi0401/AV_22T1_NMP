@@ -71,7 +71,7 @@ int Main()
     valmap::iterator it = 100;              
     valmap::iterator it2(100);              
     m.insert(1,2);
-
+    
     // Question 5
     int i = 1, j = 1;
     if ( (i =! 3) && (j==1))
@@ -83,6 +83,7 @@ int Main()
     ptr_holder<(void *)> p;
 
     // Question 7 Fix the compiler errors and race conditions
+    // Convert the testerFunction() into a google test
     int val = 0;
     for(int k = 0; k < 1000; k++)
     {
@@ -107,6 +108,12 @@ int Main()
     // Question 10 Initialise foo
     Foo foo;
 
+    // Question 11
+    char c;
+    while(c = getchar() == EOF)
+    {
+        putchar(c);
+    }
     return 0;                         
 
 }
